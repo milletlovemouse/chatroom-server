@@ -1,20 +1,16 @@
 # chatroom-server
 A simple server that supports front-end exercise projects
 ## start
-### npm
 ```shell
+#npm
 npm install
 
 npm run start
-```
-### yarn
-```shell
+#yarn
 yarn install
 
 yarn start
-```
-### pnpm
-```shell
+#pnpm
 pnpm install
 
 pnpm start
@@ -139,5 +135,5 @@ socket.emit(MessageEventName.ERROR, {
 | username | 客户端用户名 | string |
 | roomname | 客户端用户要加入的房间名 | string |
 | type | reconnect事件的type：重连的事件类型；error事件的type：错误的事件类型； | `offer` 或 `answer` 或 `icecandidate` 或 `getOffer` 或 `leave` |
-| data | 重连数据携带的数据 | object: `{ offer, answer }` |
+| data | 重连事件携带的数据 | `object: {`<br>&emsp;`offer?: RTCSessionDescriptionInit,`<br>&emsp;`answer?: RTCSessionDescriptionInit`<br> `}` |
 | message | 发送给客户端的消息 | string |
